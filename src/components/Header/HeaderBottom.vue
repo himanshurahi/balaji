@@ -407,6 +407,7 @@
 			</div>
 		</div>
 	</div>
+	<div class="body-overlay"></div>
 </template>
 
 <script>
@@ -438,6 +439,10 @@
 				meanMenuContainer: ".mobile-menu-2",
 				meanScreenWidth: "30000",
 				meanExpand: ['<i class="fal fa-plus"></i>'],
+			});
+			$(".body-overlay").on("click", function () {
+				$(".offcanvas__area").removeClass("opened");
+				$(".body-overlay").removeClass("opened");
 			});
 		},
 	};
