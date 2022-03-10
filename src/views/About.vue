@@ -1,5 +1,6 @@
 <template>
   <Header />
+  <h1>This is About Page</h1>
 </template>
 
 <script>

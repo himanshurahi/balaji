@@ -37,7 +37,9 @@
 						<div class="header-inner-end text-md-end">
 							<div class="ovic-menu-wrapper">
 								<ul>
-									<li><a href="about.html">About Us</a></li>
+									<li>
+										<router-link :to="{name: 'About'}">About Us</router-link>
+									</li>
 									<li><a href="contact.html">Order Tracking</a></li>
 									<li><a href="contact.html">Contact Us</a></li>
 									<li><a href="faq.html">FAQs</a></li>
