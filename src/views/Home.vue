@@ -1,13 +1,25 @@
 <template>
+	<router-view />
 	<Header />
-	<slider />
-	<features />
-	<banner-area />
-	<top-sell />
-	<banner-area />
-	<top-products />
-	<sliding-text />
-	<recommended-products />
+	<div style="height: 400px" v-if="loading">
+		<vue-element-loading
+			:active="true"
+			spinner="bar-fade-scale"
+			text="Please Wait.."
+			:size="70"
+			background-color="white"
+		/>
+	</div>
+	<div v-if="!loading">
+		<slider />
+		<features />
+		<banner-area />
+		<top-sell />
+		<banner-area />
+		<top-products />
+		<sliding-text />
+		<recommended-products />
+	</div>
 	<Footer />
 </template>
 
@@ -37,8 +49,16 @@
 			RecommendedProducts,
 			Footer,
 		},
+		data() {
+			return {
+				loading: true,
+			};
+		},
 		mounted() {
 			console.log("Home mounted");
+			setTimeout(() => {
+				this.loading = false;
+			}, 4000);
 		},
 	};
 </script>

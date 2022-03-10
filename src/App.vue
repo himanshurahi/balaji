@@ -11,11 +11,7 @@
 </template>
 
 <script>
-	import VueElementLoading from "vue-element-loading";
 	export default {
-		components: {
-			VueElementLoading,
-		},
 		data() {
 			return {
 				loading: true,
