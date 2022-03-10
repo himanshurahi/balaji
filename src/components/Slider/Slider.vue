@@ -198,35 +198,43 @@
 
 				animated_swiper(sliderActive1, sliderInit1);
 			}
-            var sliderr = new Swiper('.active-class', {
-		slidesPerView: 1,
-		spaceBetween: 30,
-		loop: true,
-		pagination: {
-			el: ".testimonial-pagination-6",
-			clickable: true,
-			renderBullet: function (index, className) {
-			  return '<span class="' + className + '">' + '<button>'+(index + 1)+'</button>' + "</span>";
-			},
-		},
-		breakpoints: {
-			'1200': {
-				slidesPerView: 3,
-			},
-			'992': {
-				slidesPerView: 2,
-			},
-			'768': {
-				slidesPerView: 2,
-			},
-			'576': {
+			var sliderr = new Swiper(".active-class", {
 				slidesPerView: 1,
-			},
-			'0': {
-				slidesPerView: 1,
-			},
-		},
-	});
+				spaceBetween: 30,
+				loop: true,
+				pagination: {
+					el: ".testimonial-pagination-6",
+					clickable: true,
+					renderBullet: function (index, className) {
+						return (
+							'<span class="' +
+							className +
+							'">' +
+							"<button>" +
+							(index + 1) +
+							"</button>" +
+							"</span>"
+						);
+					},
+				},
+				breakpoints: {
+					1200: {
+						slidesPerView: 3,
+					},
+					992: {
+						slidesPerView: 2,
+					},
+					768: {
+						slidesPerView: 2,
+					},
+					576: {
+						slidesPerView: 1,
+					},
+					0: {
+						slidesPerView: 1,
+					},
+				},
+			});
 		},
 	};
 </script>
