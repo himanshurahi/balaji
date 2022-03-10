@@ -7,7 +7,7 @@
 		:size="70"
 		background-color="white"
 	/>
-	<router-view />
+	<router-view v-if="!loading" />
 </template>
 
 <script>
@@ -20,7 +20,7 @@
 		mounted() {
 			setTimeout(() => {
 				this.loading = false;
-			}, 4000);
+			}, 3000);
 		},
 	};
 </script>

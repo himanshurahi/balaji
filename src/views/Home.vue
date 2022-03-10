@@ -1,5 +1,4 @@
 <template>
-	<router-view />
 	<Header />
 	<div style="height: 400px" v-if="loading">
 		<vue-element-loading
@@ -58,7 +57,7 @@
 			console.log("Home mounted");
 			setTimeout(() => {
 				this.loading = false;
-			}, 4000);
+			}, 2000);
 		},
 	};
 </script>
