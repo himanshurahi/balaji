@@ -7,7 +7,7 @@
 						<div class="header__info">
 							<div class="logo">
 								<router-link :to="{name: 'Home'}" class="logo-image"
-									><img src="assets/img/logo/logo1.svg" alt="logo"
+									><img src="/assets/img/logo/logo1.svg" alt="logo"
 								/></router-link>
 							</div>
 						</div>
