@@ -1,6 +1,6 @@
 <template>
 	<Header />
-	<div
+	<!-- <div
 		class="page-banner-area page-banner-height-2"
 		data-background="assets/img/banner/page-banner-4.jpg"
 	>
@@ -27,7 +27,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="account-area mt-70 mb-70">
 		<div class="container">
 			<div class="row">

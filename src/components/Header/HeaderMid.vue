@@ -16,8 +16,15 @@
 						<div class="header__search">
 							<form action="#">
 								<div class="header__search-box">
-									<input class="search-input" type="text" placeholder="I'm shopping for..." />
-									<button class="button" type="submit"><i class="far fa-search"></i></button>
+									<input
+										class="search-input"
+										type="text"
+										placeholder="I'm shopping for..."
+										v-model="query"
+									/>
+									<button @click.prevent="handleSearch" class="button">
+										<i class="far fa-search"></i>
+									</button>
 								</div>
 								<div class="header__search-cat">
 									<select>
@@ -122,7 +129,19 @@
 </template>
 
 <script>
-	export default {};
+	export default {
+		data() {
+			return {
+				query: "",
+			};
+		},
+		methods: {
+			handleSearch() {
+				this.$router.push({name: "Search", query: {q: this.query}});
+			},
+		},
+		
+	};
 </script>
 
 <style></style>

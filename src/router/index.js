@@ -5,6 +5,7 @@ import Dashboard from "../views/User/Dashboard.vue"
 import Auth from "../views/Auth.vue"
 import Products from "../views/Products.vue"
 import ProductDetails from "../views/ProductDetails.vue"
+import Search from "../views/Search.vue"
 
 const routes = [
   {
@@ -37,14 +38,19 @@ const routes = [
     name: 'ProductDetails',
     component: ProductDetails
   },
+  {
+    path: '/search',
+    name: 'Search',
+    component: Search
+  },
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes,
   scrollBehavior() {
     document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
-  }
+  },
+  routes
 })
 
 export default router
