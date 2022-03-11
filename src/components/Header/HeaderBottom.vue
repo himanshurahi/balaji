@@ -383,7 +383,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="offcanvas__area">
+	<div class="offcanvas__area menu">
 		<div class="offcanvas__wrapper">
 			<div class="offcanvas__close">
 				<button class="offcanvas__close-btn" id="offcanvas__close-btn">
@@ -407,11 +407,14 @@
 			</div>
 		</div>
 	</div>
+	<SideCart />
 	<div class="body-overlay"></div>
 </template>
 
 <script>
+	import SideCart from "../Cart/SideCart.vue";
 	export default {
+		components: {SideCart},
 		mounted() {
 			$(".cat-toggle-btn").on("click", function () {
 				$(".cat__menu").slideToggle(500);
@@ -420,11 +423,12 @@
 				$(".side-menu").slideToggle(500);
 			});
 			$(".offcanvas-toggle-btn").on("click", function () {
-				$(".offcanvas__area").addClass("opened");
+				$(".menu").addClass("opened");
 				$(".body-overlay").addClass("opened");
 			});
 			$(".offcanvas__close-btn").on("click", function () {
-				$(".offcanvas__area").removeClass("opened");
+				$(".menu").removeClass("opened");
+				$(".cart").removeClass("opened");
 				$(".body-overlay").removeClass("opened");
 			});
 			$("#mobile-menu").meanmenu({
@@ -441,7 +445,7 @@
 				meanExpand: ['<i class="fal fa-plus"></i>'],
 			});
 			$(".body-overlay").on("click", function () {
-				$(".offcanvas__area").removeClass("opened");
+				$(".menu").removeClass("opened");
 				$(".body-overlay").removeClass("opened");
 			});
 		},

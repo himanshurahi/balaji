@@ -67,7 +67,7 @@
 								</a>
 							</div>
 							<div class="block-cart action">
-								<a class="icon-link" href="cart.html">
+								<a class="icon-link" href="#">
 									<i class="flaticon-shopping-bag"></i>
 									<span class="count">1</span>
 									<span class="text">
@@ -75,7 +75,7 @@
 										$00.00
 									</span>
 								</a>
-								<div class="cart">
+								<!-- <div class="cart">
 									<div class="cart__mini">
 										<ul>
 											<li>
@@ -118,7 +118,7 @@
 											</li>
 										</ul>
 									</div>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
@@ -140,7 +140,12 @@
 				this.$router.push({name: "Search", query: {q: this.query}});
 			},
 		},
-		
+		mounted() {
+			$(".block-cart").on("click", function () {
+				$(".cart").addClass("opened");
+				$(".body-overlay").addClass("opened");
+			});
+		},
 	};
 </script>
 

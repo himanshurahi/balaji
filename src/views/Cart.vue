@@ -1,7 +1,7 @@
 <template>
 	<Header />
 	<section class="checkout-area p-5">
-		<div class="container">
+		<div class="">
 			<form action="#">
 				<div class="row">
 					<div class="col-lg-6 col-sm-12">
@@ -20,6 +20,7 @@
 										<div class="card-body">
 											<h5 class="card-title">Himanshu Rahi</h5>
 											<p class="card-text">xxx-xxx--xxx DelhiS</p>
+											<i class="fa fa-edit"></i>
 										</div>
 									</div>
 								</div>
@@ -295,10 +296,14 @@
 		background-color: #263c97;
 	}
 	.active h5,
-	.active p {
+	.active p,
+	.active .fa {
 		color: white;
 	}
 	.address {
 		cursor: pointer;
+	}
+	.card-body .fa {
+		float: right;
 	}
 </style>
