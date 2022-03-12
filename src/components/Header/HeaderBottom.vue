@@ -407,14 +407,10 @@
 			</div>
 		</div>
 	</div>
-	<SideCart />
-	<div class="body-overlay"></div>
 </template>
 
 <script>
-	import SideCart from "../Cart/SideCart.vue";
 	export default {
-		components: {SideCart},
 		mounted() {
 			$(".cat-toggle-btn").on("click", function () {
 				$(".cat__menu").slideToggle(500);
@@ -446,6 +442,7 @@
 			});
 			$(".body-overlay").on("click", function () {
 				$(".menu").removeClass("opened");
+				$(".cart").removeClass("opened");
 				$(".body-overlay").removeClass("opened");
 			});
 		},

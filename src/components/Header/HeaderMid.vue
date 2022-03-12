@@ -67,7 +67,7 @@
 								</a>
 							</div>
 							<div class="block-cart action">
-								<a class="icon-link" href="#">
+								<a class="icon-link" href="#" @click="toggleOffCanvasCart()">
 									<i class="flaticon-shopping-bag"></i>
 									<span class="count">1</span>
 									<span class="text">
@@ -126,25 +126,40 @@
 			</div>
 		</div>
 	</div>
+	<SideCart :open="isOpen" @close="closeSideCart" />
+	<div
+		class="body-overlay"
+		:class="{opened: isOpen}"
+		@click="closeSideCart"
+	></div>
 </template>
 
 <script>
+	import SideCart from "../Cart/SideCart.vue";
 	export default {
+		components: {SideCart},
 		data() {
 			return {
 				query: "",
+				isOpen: false,
 			};
 		},
 		methods: {
 			handleSearch() {
 				this.$router.push({name: "Search", query: {q: this.query}});
 			},
+			toggleOffCanvasCart() {
+				this.isOpen = true;
+			},
+			closeSideCart() {
+				this.isOpen = false;
+			},
 		},
 		mounted() {
-			$(".block-cart").on("click", function () {
-				$(".cart").addClass("opened");
-				$(".body-overlay").addClass("opened");
-			});
+			// $(".block-cart").on("click", function () {
+			// 	$(".cart").addClass("opened");
+			// 	$(".body-overlay").addClass("opened");
+			// });
 		},
 	};
 </script>

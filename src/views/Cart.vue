@@ -287,6 +287,7 @@
 				this.address = index;
 			},
 		},
+		mounted() {},
 	};
 </script>
 

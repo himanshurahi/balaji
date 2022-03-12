@@ -1,8 +1,12 @@
 <template>
-	<div class="offcanvas__area cart">
+	<div class="offcanvas__area cart" :class="{opened: open}">
 		<div class="offcanvas__wrapper">
 			<div class="offcanvas__close">
-				<button class="offcanvas__close-btn" id="offcanvas__close-btn">
+				<button
+					class="offcanvas__close-btn"
+					id="offcanvas__close-btn"
+					@click="closeSideCart"
+				>
 					<i class="fal fa-times"></i>
 				</button>
 			</div>
@@ -55,7 +59,7 @@
 								</div>
 							</li>
 							<li>
-								<router-link :to="{name: 'Cart'}" class="wc-cart mb-10"
+								<router-link :to="{name: 'Cart'}" @click="closeSideCart" class="wc-cart mb-10"
 									>Checkout / View Cart</router-link
 								>
 								<!-- <a href="checkout.html" class="wc-checkout">Checkout</a> -->
@@ -72,7 +76,20 @@
 </template>
 
 <script>
-	export default {};
+	export default {
+		props: ["open"],
+		mounted() {
+			// $(".wc-cart").on("click", function () {
+			// 	$(".cart").removeClass("opened");
+			// 	$(".body-overlay").removeClass("opened");
+			// });
+		},
+		methods: {
+			closeSideCart() {
+				this.$emit("close");
+			},
+		},
+	};
 </script>
 
 <style></style>
