@@ -1,5 +1,4 @@
 <template>
-	<Header />
 	<div style="height: 400px" v-if="loading">
 		<vue-element-loading
 			:active="true"

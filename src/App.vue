@@ -1,4 +1,5 @@
 <template>
+	<Header />
 	<vue-element-loading
 		:active="loading"
 		is-full-screen
@@ -7,11 +8,20 @@
 		:size="70"
 		background-color="white"
 	/>
-	<router-view v-if="!loading" />
+	<router-view v-slot="{Component}" v-if="!loading">
+		<transition name="fade" mode="out-in">
+			<div :key="$route.fullPath">
+				<component :is="Component" />
+			</div>
+		</transition>
+	</router-view>
+	<!-- <router-view v-if="!loading" /> -->
 </template>
 
 <script>
+	import Header from "./components/Header/Header.vue";
 	export default {
+		components: {Header},
 		data() {
 			return {
 				loading: true,
@@ -28,7 +38,7 @@
 <style>
 	.fade-enter-active,
 	.fade-leave-active {
-		transition: opacity 1s ease;
+		transition: opacity 0.2s ease;
 	}
 
 	.fade-enter-from,

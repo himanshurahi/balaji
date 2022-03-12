@@ -1,5 +1,4 @@
 <template>
-	<Header />
 	<section class="checkout-area p-5">
 		<div class="">
 			<form action="#">

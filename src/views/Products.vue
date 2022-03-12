@@ -1,5 +1,4 @@
 <template>
-	<Header />
 	<section class="breadcrumb__area box-plr-75">
 		<div class="container">
 			<div class="row">

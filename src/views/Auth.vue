@@ -1,5 +1,4 @@
 <template>
-	<Header />
 	<!-- <div
 		class="page-banner-area page-banner-height-2"
 		data-background="assets/img/banner/page-banner-4.jpg"

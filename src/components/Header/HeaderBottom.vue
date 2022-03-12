@@ -377,7 +377,7 @@
 				</div>
 				<div class="col-lg-3 col-md-6 col-9">
 					<div class="shopeing-text text-sm-end">
-						<p>Spend $120 more and get free shipping!</p>
+						<p>Your Location</p>
 					</div>
 				</div>
 			</div>

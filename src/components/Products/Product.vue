@@ -1,5 +1,5 @@
 <template>
-	<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+	<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-3">
 		<div class="product__item product__item-d">
 			<div class="product__thumb fix">
 				<div class="product-image w-img">
